@@ -11,7 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { LoginFormComponent } from './login-form/login-form.component';
+import { LoginFormComponent } from './profile-form/profile-form.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
@@ -20,13 +20,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 import { LoginpageComponent } from './loginpage/loginpage.component';
-import { MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { IntroComponent } from './intro/intro.component';
-import { PaginatorComponent } from './paginator/paginator.component';
-import { MatTableModule} from '@angular/material/table'; 
-import { MatPaginatorModule} from '@angular/material/paginator';
+import { PaginatorComponent } from './datastorage/datastorage.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { FormsModule } from '@angular/forms';
 import { datashareService } from './datashare.service';
+import { MatDialogModule } from '@angular/material/dialog';
+import { SigninPageComponent } from './signin-page/signin-page.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { datashareService } from './datashare.service';
     LoginpageComponent,
     IntroComponent,
     PaginatorComponent,
+    SigninPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,9 +61,11 @@ import { datashareService } from './datashare.service';
     MatProgressSpinnerModule,
     MatTableModule,
     MatPaginatorModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule,
   ],
   providers: [datashareService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [LoginpageComponent],
 })
-export class AppModule { }
+export class AppModule {}
