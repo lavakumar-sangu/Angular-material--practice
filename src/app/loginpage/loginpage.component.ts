@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { datashareService } from '../datashare.service';
 import { MatDialogRef } from '@angular/material/dialog';
+
 @Component({
   selector: 'app-loginpage',
   templateUrl: './loginpage.component.html',
@@ -10,6 +11,7 @@ export class LoginpageComponent {
   hide = true;
   passwords: any;
   name: any;
+  dataService: any;
   constructor(
     public data: datashareService,
     public dialogRef: MatDialogRef<LoginpageComponent>
@@ -24,6 +26,6 @@ export class LoginpageComponent {
     this.onClose();
   }
   onClose() {
-    this.dialogRef.close();
+    this.dialogRef.close(true);
   }
 }

@@ -29,6 +29,8 @@ import { FormsModule } from '@angular/forms';
 import { datashareService } from './datashare.service';
 import { MatDialogModule } from '@angular/material/dialog';
 import { SigninPageComponent } from './signin-page/signin-page.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -63,9 +65,12 @@ import { SigninPageComponent } from './signin-page/signin-page.component';
     MatPaginatorModule,
     FormsModule,
     MatDialogModule,
+    MatTooltipModule,
+    MatSnackBarModule,
   ],
   providers: [datashareService],
   bootstrap: [AppComponent],
   entryComponents: [LoginpageComponent],
 })
 export class AppModule {}
+

@@ -25,3 +25,9 @@
 .col:last-child {
     margin-right: 0;
 }
+
+.test {
+    padding-top: 5%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
