@@ -31,6 +31,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { SigninPageComponent } from './signin-page/signin-page.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSnackBarModule} from '@angular/material/snack-bar';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -67,10 +68,10 @@ import { MatSnackBarModule} from '@angular/material/snack-bar';
     MatDialogModule,
     MatTooltipModule,
     MatSnackBarModule,
+    HttpClientModule,
   ],
   providers: [datashareService],
   bootstrap: [AppComponent],
-  entryComponents: [LoginpageComponent],
 })
 export class AppModule {}
 

@@ -129,13 +129,18 @@ export interface DialogData {
   template: `
     <h1 mat-dialog-title>{{ data.title }}</h1>
     <div mat-dialog-content>
-     {{data.message}}
+      {{ data.message }}
     </div>
     <div mat-dialog-actions>
-       <button type="button" class="btn btn-danger" (click)="onNoClick()">
+      <button type="button" class="btn btn-danger" (click)="onNoClick()">
         Cancel
       </button>
-      <button type="button" class="btn btn-primary" (click)="onYesClick()" cdkFocusInitial>
+      <button
+        type="button"
+        class="btn btn-primary"
+        (click)="onYesClick()"
+        cdkFocusInitial
+      >
         Ok
       </button>
     </div>
@@ -160,10 +165,15 @@ export class ConfirmationDialog {
   template: `
     <h1 mat-dialog-title>{{ data.title }}</h1>
     <div mat-dialog-content>
-     {{data.message}}
+      {{ data.message }}
     </div>
     <div mat-dialog-actions>
-      <button mat-raised-button color="primary" (click)="onYesClick()" cdkFocusInitial>
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="onYesClick()"
+        cdkFocusInitial
+      >
         Ok
       </button>
     </div>

@@ -13,11 +13,11 @@
                         <mat-label>Enter your password</mat-label>
                         <input [(ngModel)]="passwords" name="passwords" matInput [type]="hide ? 'password' : 'text'" />
                         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-<mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
-</button> </mat-form-field><br /><br />
+              <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+            </button> </mat-form-field><br /><br />
                     <button mat-raised-button color="accent" (click)="updateText()">
-<i>Add</i><mat-icon>add</mat-icon>
-</button>
+            <i>Add</i><mat-icon>add</mat-icon>
+          </button>
                 </form>
             </mat-card-header>
         </mat-card>

@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-signin-page',
   templateUrl: './signin-page.component.html',
-  styleUrls: ['./signin-page.component.css']
+  styleUrls: ['./signin-page.component.css'],
 })
 export class SigninPageComponent implements OnInit {
   hide = true;
@@ -12,15 +12,13 @@ export class SigninPageComponent implements OnInit {
   email: any;
   mobno: any;
   constructor() {}
-  ngOnInit() {
-  }
-  public obj: Array<{name: string, email: string, mobno:number}> = [];
+  ngOnInit() {}
+  public obj: Array<{ name: string; email: string; mobno: number }> = [];
   updateText() {
     var obj = {
-      name:this.name,
-      email:this.email,
-      mobile:this.mobno
-    }
-    
+      name: this.name,
+      email: this.email,
+      mobile: this.mobno,
+    };
   }
 }
