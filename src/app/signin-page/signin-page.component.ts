@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { user } from '../datashare.service';
 
 @Component({
   selector: 'app-signin-page',
@@ -7,18 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SigninPageComponent implements OnInit {
   hide = true;
-  msg: any;
-  name: any;
-  email: any;
-  mobno: any;
+  userDetails: user = {
+    name: '',
+    email: '',
+    passwords: '',
+    mobno: 0,
+  };
   constructor() {}
   ngOnInit() {}
-  public obj: Array<{ name: string; email: string; mobno: number }> = [];
   updateText() {
     var obj = {
-      name: this.name,
-      email: this.email,
-      mobile: this.mobno,
+      name: this.userDetails.name,
+      email: this.userDetails.email,
+      mobile: this.userDetails.mobno,
     };
   }
 }

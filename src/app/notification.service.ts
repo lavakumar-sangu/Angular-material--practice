@@ -58,7 +58,7 @@ export class NotificationService {
     message: string,
     okCallback: () => void,
     title = 'Are you sure?',
-    cancelCallback: () => any = () => {}
+    cancelCallback: () =>  any = () => {}
   ) {
     const dialogRef = this.dialog.open(ConfirmationDialog, {
       width: '250px',

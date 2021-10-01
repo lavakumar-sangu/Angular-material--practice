@@ -5,10 +5,9 @@ import { MatDialog } from '@angular/material/dialog';
 import { LoginpageComponent } from '../loginpage/loginpage.component';
 import { NotificationService } from '../notification.service';
 
-export interface user {
+export interface tablerow {
   name: string;
   passwords: string;
-  actions: string;
 }
 
 @Component({
@@ -17,8 +16,8 @@ export interface user {
   styleUrls: ['./datastorage.component.css'],
 })
 export class PaginatorComponent {
-  dataSource = new MatTableDataSource<any>();
-  private USER_DATA: user[] = [];
+  dataSource = new MatTableDataSource<{ name: string; passwords: string }>();
+  private USER_DATA: tablerow[] = [];
   constructor(
     public dataService: datashareService,
     private dialog: MatDialog,
@@ -31,9 +30,10 @@ export class PaginatorComponent {
   }
   displayedColumns = ['name', 'passwords', 'actions'];
 
-  removeData(name: number) {
-    if (name > -1) {
-      this.USER_DATA.splice(name, 1);
+
+  removeData(dataremoved: number) {
+    if (dataremoved > -1) {
+      this.USER_DATA.splice(dataremoved, 1);
       this.notificationService.confirmation(
         'it will be remove forever',
         () => {
@@ -50,7 +50,8 @@ export class PaginatorComponent {
   onCreate() {
     const dialogRef = this.dialog.open(LoginpageComponent, { width: '35%' });
     dialogRef.afterClosed().subscribe((result) => {
-      if (result) this.USER_DATA = this.dataService.getArray();
+      if (result) 
+      this.USER_DATA = this.dataService.getArray();
       this.dataSource.data = this.USER_DATA;
     });
   }

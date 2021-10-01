@@ -1,15 +1,22 @@
 import { Injectable } from '@angular/core';
 
+export interface user {
+  name: string;
+  passwords: string;
+  email: string;
+  mobno: number;
+}
+
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class datashareService {
-  arr: any = [];
+  data: user[] = [];
   constructor() {}
-  setArray(val: any) {
-    this.arr.push(val);
+  setArray(loginData: user) {
+    this.data.push(loginData);
   }
   getArray() {
-    return this.arr;
+    return this.data;
   }
 }

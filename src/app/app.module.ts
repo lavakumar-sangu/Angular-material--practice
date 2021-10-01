@@ -30,7 +30,7 @@ import { datashareService } from './datashare.service';
 import { MatDialogModule } from '@angular/material/dialog';
 import { SigninPageComponent } from './signin-page/signin-page.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -74,4 +74,3 @@ import { HttpClientModule } from '@angular/common/http';
   bootstrap: [AppComponent],
 })
 export class AppModule {}
-

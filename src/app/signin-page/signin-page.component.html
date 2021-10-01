@@ -6,19 +6,19 @@
                     <img src="/assets/images/KPT.jpg" height="15%" width="120px" /><br /><br />
                     <mat-form-field appearance="outline" color="accent" style="width: 235px !important">
                         <mat-label>Enter your name </mat-label>
-                        <input [(ngModel)]="name" name="name" matInput placeholder="SANGU LAVAKUMAR" required />
+                        <input name="name" matInput placeholder="SANGU LAVAKUMAR" required />
                         <mat-hint>Min 5 characters</mat-hint>
                     </mat-form-field><br />
                     <mat-form-field appearance="outline" style="width: 235px !important">
                         <mat-label>Enter your email
                             <mat-icon>email</mat-icon>
                         </mat-label>
-                        <input [(ngModel)]="email" name="email" matInput placeholder="pat@example.com" required /> </mat-form-field><br />
+                        <input name="email" matInput placeholder="pat@example.com" required /> </mat-form-field><br />
                     <mat-form-field appearance="outline" style="width: 235px !important">
                         <mat-label>Contact No
                             <mat-icon>phone_android</mat-icon>
                         </mat-label>
-                        <input [(ngModel)]="mobno" name="mobno" matInput placeholder="9876543210" required /> </mat-form-field><br />
+                        <input name="mobno" matInput placeholder="9876543210" required /> </mat-form-field><br />
                     <mat-form-field appearance="fill">
                         <mat-label>Enter your password</mat-label>
                         <input matInput [type]="hide ? 'password' : 'text'" />

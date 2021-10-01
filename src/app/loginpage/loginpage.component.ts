@@ -9,20 +9,26 @@ import { MatDialogRef } from '@angular/material/dialog';
 })
 export class LoginpageComponent {
   hide = true;
-  passwords: any;
-  name: any;
-  dataService: any;
+  passwords: string = '';
+  name: string = '';
+  user: string = '';
+  email: string = '';
+  mobno: number = 0;
+
   constructor(
     public data: datashareService,
     public dialogRef: MatDialogRef<LoginpageComponent>
   ) {}
-  public obj: Array<{ name: string; passwords: string }> = [];
+
   updateText() {
-    var obj = {
+    var UserData = {
       name: this.name,
       passwords: this.passwords,
+      user: this.user,
+      email: this.email,
+      mobno: this.mobno,
     };
-    this.data.setArray(obj);
+    this.data.setArray(UserData);
     this.onClose();
   }
   onClose() {
