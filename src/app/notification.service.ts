@@ -58,7 +58,7 @@ export class NotificationService {
     message: string,
     okCallback: () => void,
     title = 'Are you sure?',
-    cancelCallback: () =>  any = () => {}
+    cancelCallback: () => any = () => {}
   ) {
     const dialogRef = this.dialog.open(ConfirmationDialog, {
       width: '250px',
@@ -132,17 +132,8 @@ export interface DialogData {
       {{ data.message }}
     </div>
     <div mat-dialog-actions>
-      <button type="button" class="btn btn-danger" (click)="onNoClick()">
-        Cancel
-      </button>
-      <button
-        type="button"
-        class="btn btn-primary"
-        (click)="onYesClick()"
-        cdkFocusInitial
-      >
-        Ok
-      </button>
+      <button style='margin-right:16px; margin-top:5%'  class="btn btn-danger" (click)="onNoClick()">Cancel</button>
+      <button style='margin-right:16px; margin-top:5%' class="btn btn-primary" (click)="onYesClick()" cdkFocusInitial>Ok</button>
     </div>
   `,
 })

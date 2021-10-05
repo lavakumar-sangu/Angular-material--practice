@@ -11,9 +11,6 @@ export class LoginpageComponent {
   hide = true;
   passwords: string = '';
   name: string = '';
-  user: string = '';
-  email: string = '';
-  mobno: number = 0;
 
   constructor(
     public data: datashareService,
@@ -24,9 +21,6 @@ export class LoginpageComponent {
     var UserData = {
       name: this.name,
       passwords: this.passwords,
-      user: this.user,
-      email: this.email,
-      mobno: this.mobno,
     };
     this.data.setArray(UserData);
     this.onClose();

@@ -3,8 +3,6 @@ import { Injectable } from '@angular/core';
 export interface user {
   name: string;
   passwords: string;
-  email: string;
-  mobno: number;
 }
 
 @Injectable({
